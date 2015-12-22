@@ -1,7 +1,7 @@
 # JCenter
 
 ### Example
-build.gradle
+#### Module build.gradle  
 ````gradle
 apply plugin: 'com.android.library'
 ext {
@@ -57,6 +57,25 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
-apply from: 'https://raw.githubusercontent.com/ligboy/JCenter/1.0.0/bintray.gradle'
-   
-   
+apply from: 'https://raw.githubusercontent.com/ligboy/JCenter/1.0.0/bintray.gradle'      
+````  
+  
+#### Project build.gradle   
+
+````gradle
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.0.0-alpha3'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.3'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.4'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}  
+````   
+
+  
+  
